@@ -41,21 +41,11 @@ a {
 }
 
 /* Selecting elements by ID */
-#main-bio,
-#bio-image {
+#main-txt,
+#image {
   float: left;
 }
 
 #figure {
   position: relative;
-}
-
-#bio-name {
-  position: absolute;
-  top: 150px;
-  left: 30px;
-}
-
-#main-bio {
-  width: 70%;
 }
