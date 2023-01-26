@@ -1,40 +1,34 @@
-#Import Dependencies
-import numpy as np
-import datetime as dt
-import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
-from flask import Flask, jsonify
+from flask import Flask, render_template, jsonify
+import pandas
+import json
 
-#Setup Database
-#engine = create_engine("SQL_FILE_LOCATION")
-
-# reflect an existing database into a new model
-Base = automap_base()
-# reflect the tables
-Base.prepare(autoload_with = engine)
-
-# View all of the classes that automap found
-Base.classes.keys()
-
-# Save references to the table(s) based on previous step
-#x = Base.classes.x
-
-#SET UP FLASK
-# Create an app
 app = Flask(__name__)
 
-# Flask Routes
 @app.route("/")
-def welcome():
-    """List all available api routes."""
-    return ()
+def index():
+    team_list = ["Jumpers", "Dunkers", "Dribblers", "Passers"]
+    return render_template("index.html", list=team_list)
 
-@app.route("PLACEHOLDER_TEXT")
-def names():
-    # Create our session (link) from Python to the DB
-    session = Session(engine)
+@app.route("/api/v1.0/data")
+def source_data():
+    df=pandas.read_csv ("university_data.csv")
+    data = {x: df[x].tolist() for x in df.columns}
+    return jsonify(data)
 
-if __name__ == '__main__':
+
+@app.route("/api/v1.0/lat_long")
+def lat_long():
+    df=pandas.read_csv ("university_data.csv")
+    data = {
+      'lat': df["latitude"].tolist(),
+      'long': df["longitude"].tolist(),
+      'another_col': ['data_here']
+    }
+    return jsonify(data)
+
+
+    
+
+if __name__ == "__main__":
     app.run(debug=True)
+    
