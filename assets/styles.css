@@ -1,0 +1,8 @@
+.data {
+    background-color:darkseagreen;
+}
+
+.index-image {
+    background-image: url("../assets/generic-uni.png");
+    background-size: 100%;
+}
