@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Top U.S. Colleges</title>
+    <title>Tuition and Fees</title>
 
     <!-- Boostrap Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,14 +16,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Our own CSS stylesheet -->
-    <link rel="stylesheet" href="assets/styles.css" media="screen">
+    <link rel="stylesheet" href="../assets/styles.css" media="screen">
 
   </head>
 
   <body class="index-image">
     <!-- Start of navbar -->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:royalblue">
-        <a class="navbar-brand" href="index.html">Top U.S. Colleges</a>
+        <a class="navbar-brand" href="../index.html">Top U.S. Colleges</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -34,17 +34,17 @@
                   Plots
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="visualizations/studentpop.html">Student Population</a>
-                    <a class="dropdown-item" href="visualizations/historical.html">Historical Significance</a>
-                    <a class="dropdown-item" href="visualizations/topranked.html">Top 10 Ranked Schools</a>
-                    <a class="dropdown-item" href="visualizations/tuitionfees.html">Tuition and Fees</a>
+                    <a class="dropdown-item" href="studentpop.html">Student Population</a>
+                    <a class="dropdown-item" href="historical.html">Historical Significance</a>
+                    <a class="dropdown-item" href="topranked.html">Top 10 Ranked Schools</a>
+                    <a class="dropdown-item" href="tuitionfees.html">Tuition and Fees</a>
                     <!--a class="dropdown-item" href="visualizations/wind.html">Wind</a-->
                 </div>
               <!--li class="nav-item">
                   <a class="nav-link" href="comparison.html">Comparison</a>
               </li-->
               <li class="nav-item">
-                   <a class="nav-link" href="data.html">Data</a>
+                   <a class="nav-link" href="../data.html">Data</a>
               </li>
           </ul>
       </div>
@@ -53,48 +53,39 @@
 
     <!-- Start of container -->
     <div class="container">
-      <div class="row">
-          <div class="col-md-10">
-              <br><div class="jumbotron" style="background-color:rgba(143, 188, 143, 0.681)"><img src="assets/allschools.png"width="90%">
-                   <h1 class="display-4">Top US Colleges </h1>
-                      <p class="lead">In this study we are looking at the top ranked U.S. colleges and looking at the different
-                        factors that affect every different student recruit.<br>
-                        The Top 10 are as follows:<br>
-                        1.Princeton: Princeton, NJ, Est: 1746<br>
-                        2.Harvard: Cambridge, MA, Est: 1636<br>
-                        3. (tied) Univ. of Chicago: Chicago, IL, Est: 1890<br>
-                        3. (tied) Yale University: Newhaven, CT, Est: 1701<br>
-                        5. (tied) Columbia: New York, NY, Est: 1754<br>
-                        5. (tied) Stanford: Stanford, CA, Est: 1891<br>
-                        7. M.I.T.: Cambridge, MA, Est: 1861<br>
-                        8. (tied) Duke: Durham, NC Est: 1924<br>
-                        8. (tied) Univ. of Pennsylvania: Philadelphia, PA, Est: 1740<br>
-                        10. Johns Hopkins: Baltimore, MD, Est: 1876<br>
-                      </p>
-                  <hr class="my-4">
-                      <p>This information was found using data about Top Colleges from two different Kaggle sources that provided a CSV files.<br>
-                         We cleaned and merged the data in SQL.<br>
-                         A Flask API was created from the combined data and is utilized on this website.<br>
-                        Plotly and Charts.js were used to plot the data images seen on this website.</p>
-               </div>
+        <div class="row">
+            <div class="col-md-10">
+              <h1 class="display-4" style="color:white">Tuition and Fees</h1>
+                <br><div class="jumbotron" style="background-color:rgba(143, 188, 143, 0.681)">
+                  <p class="lead">The Cost Breakdown</p>
+                    </button>
+                <br><br><a href="../resources/graphs-chartJS-tuition.html">
+                    <button class="btn btn-primary" style="background-color:royalblue;color:black;">
+                        <img src="../assets/tuition_graph.PNG" width="100%" />Our Chart
+                    </button>
+                  </a>
+                  <p class="lead">The cloudiness to latitutde seems to be the least linear so far of the groups we have analyzed. 
+                    In the Northern hemisphere the amount of cloudiness seems nothing to do with correlation of latitude, as the plots are spread all across the sheet.
+                    There seems to be slightly more cloudiness towards the equator in the Southern Hemisphere, but just as its Nothern counter part, the range is much more sparatic. </p>
+                </div>
           <!-- Start of Visualizations imageNav Area -->
         </div>
         <div class="col-md-2">
-           <br><a href="visualizations/topranked.html">
+           <br><a href="topranked.html">
                 <button class="btn btn-primary" style="background-color:royalblue;color:darkseagreen;">
-                    <img src="assets/locations.png" width="90%" />Top 10 Ranked Schools
+                    <img src="../assets/locations.png" width="90%" />Top 10 Ranked Schools
                 </button></a>
-            <br><br><a href="visualizations/historical.html">
+            <br><br><a href="historical.html">
                 <button class="btn btn-primary" style="background-color:royalblue;color:darkseagreen;">
-                    <img src="assets/yearsfounded.png" width="90%" />Historical Significance
+                    <img src="../assets/yearsfounded.png" width="90%" />Historical Significance
                 </button>
-            <br><br><a href="visualizations/studentpop.html">
+            <br><br><a href="studentpop.html">
                 <button class="btn btn-primary" style="background-color:royalblue;color:darkseagreen;">
-                    <img src="assets/undergrad_graph.PNG" width="90%" />Student Population
+                    <img src="../assets/undergrad_graph.PNG" width="90%" />Student Population
                 </button>
-            <br><br><a href="visualizations/tuitionfees.html">
+            <br><br><a href="tuitionfees.html">
                 <button class="btn btn-primary" style="background-color:royalblue;color:darkseagreen;">
-                    <img src="assets/tuition_graph.PNG" width="90%" />Tuition and Fees
+                    <img src="../assets/tuition_graph.PNG" width="90%" />Tuition and Fees
                 </button>
         </div>
           <!-- End of the Visualizations imageNav Area -->
